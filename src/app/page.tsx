@@ -33,6 +33,7 @@ export default function Home() {
           className="w-full h-full object-cover"
           muted
           autoPlay
+          playsInline
           loop
           ref={videoRef}
         >
