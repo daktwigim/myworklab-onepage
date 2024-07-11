@@ -5,22 +5,68 @@ import { ReactEventHandler, useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [videoLoaded, setVideoLoaded] = useState<boolean>(false);
+  const [videoState, setVideoState] = useState<number>(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  function checkVideoLoaded(video: HTMLVideoElement) {
-    console.log("video loaded");
-    setVideoLoaded(true);
-    video.play();
+  // function addlVideoLoadHandler(video: HTMLVideoElement) {
+  //   console.log('add listener')
+  //   video.addEventListener("canplay", () => {
+  //     console.log("Video is fully buffered and can be played through without stopping.");
+  //     setVideoLoaded(true);
+  //   });
+
+  //   video.addEventListener("loadeddata", () => {
+  //     console.log("Video data has been loaded.");
+  //     setVideoLoaded(true);
+  //   });
+
+  //   video.addEventListener("error", (e) => {
+  //     console.error("Error loading video:", e);
+  //     setVideoLoaded(false);
+  //   });
+  // }
+
+  function checkLoadStatus(video: HTMLVideoElement) {
+    console.log('check Status')
+    const readyState = video.readyState;
+    setVideoState(readyState);
+
+    switch (readyState) {
+      case 0:
+        console.log("No information is available about the media resource.");
+        break;
+      case 1:
+        console.log("Enough of the media resource has been retrieved that the metadata attributes are initialized.");
+        break;
+      case 2:
+        console.log("Data is available at the current playback position.");
+        break;
+      case 3:
+        console.log("Data for the current playback position as well as for at least a little bit ahead is available.");
+        break;
+      case 4:
+        console.log("Enough data is available for the media resource to be played through to the end without interruption.");
+        break;
+      default:
+        console.log("Unknown readyState:", readyState);
+        break;
+    }
   }
 
   useEffect(() => {
-    console.log("effected");
     const video = videoRef.current;
     console.log(video);
     if (video) {
-      checkVideoLoaded(video);
+      setVideoLoaded(true);
     }
   }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      checkLoadStatus(video);
+    }
+  }, [videoLoaded]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
@@ -35,6 +81,15 @@ export default function Home() {
           autoPlay
           playsInline
           loop
+          onCanPlay={() => {
+            setVideoLoaded(true);
+          }}
+          onLoad={() => {
+            setVideoLoaded(true);
+          }}
+          onLoadedData={() => {
+            setVideoLoaded(true);
+          }}
           ref={videoRef}
         >
           <source
@@ -43,9 +98,9 @@ export default function Home() {
           />
         </video>
         {/* Background Image Thumbnail */}
-        {!videoLoaded && (
+        {videoState === 0 && (
           <Image
-            className="absolute top-0 left-0"
+            className="absolute top-0 left-0 object-cover"
             src="/img/background.png"
             fill
             alt="배경 이미지"
