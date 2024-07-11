@@ -8,27 +8,9 @@ export default function Home() {
   const [videoState, setVideoState] = useState<number>(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // function addlVideoLoadHandler(video: HTMLVideoElement) {
-  //   console.log('add listener')
-  //   video.addEventListener("canplay", () => {
-  //     console.log("Video is fully buffered and can be played through without stopping.");
-  //     setVideoLoaded(true);
-  //   });
-
-  //   video.addEventListener("loadeddata", () => {
-  //     console.log("Video data has been loaded.");
-  //     setVideoLoaded(true);
-  //   });
-
-  //   video.addEventListener("error", (e) => {
-  //     console.error("Error loading video:", e);
-  //     setVideoLoaded(false);
-  //   });
-  // }
-
   function checkLoadStatus(video: HTMLVideoElement) {
-    console.log('check Status')
     const readyState = video.readyState;
+    console.log('check Status:: ', readyState)
     setVideoState(readyState);
 
     switch (readyState) {
@@ -57,16 +39,16 @@ export default function Home() {
     const video = videoRef.current;
     console.log(video);
     if (video) {
-      setVideoLoaded(true);
+      checkLoadStatus(video)
     }
   }, []);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      checkLoadStatus(video);
-    }
-  }, [videoLoaded]);
+  // useEffect(() => {
+  //   const video = videoRef.current;
+  //   if (video) {
+  //     checkLoadStatus(video);
+  //   }
+  // }, [videoLoaded]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
@@ -81,14 +63,14 @@ export default function Home() {
           autoPlay
           playsInline
           loop
-          onCanPlay={() => {
-            setVideoLoaded(true);
+          onCanPlay={(event) => {
+            checkLoadStatus(event?.currentTarget);
           }}
-          onLoad={() => {
-            setVideoLoaded(true);
+          onLoad={(event) => {
+            checkLoadStatus(event?.currentTarget);
           }}
-          onLoadedData={() => {
-            setVideoLoaded(true);
+          onLoadedData={(event) => {
+            checkLoadStatus(event?.currentTarget);
           }}
           ref={videoRef}
         >
