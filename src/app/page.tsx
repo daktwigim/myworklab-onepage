@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
+    <main className="flex min-h-screen flex-col items-center justify-center">
       {/* Backgroud Image and Video */}
       <div className="fixed top-0 left-0 w-full h-full -z-10">
         {/* Background darkter fillter */}
