@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4">
       {/* Backgroud Image and Video */}
       <div className="fixed top-0 left-0 w-full h-full -z-10">
         {/* Background darkter fillter */}
@@ -62,11 +62,11 @@ export default function Home() {
           width={380}
           height={50}
         />
-        <h2 className="text-lg lg:text-2xl mb-8">
+        <h2 className="text-lg text-white lg:text-2xl mb-8">
           사람들에게 하고 싶은 일을 찾아주고,
           <br /> 그들이 경제적 자유를 바탕으로 즐겁고 의미 있게 일하는 세상을 만듭니다
         </h2>
-        <ul className="flex gap-4 flex-col lg:flex-row">
+        <ul className="flex gap-4 flex-col lg:flex-row text-white">
           <li className="flex-1 border rounded-lg p-3 cursor-pointer">
             <a
               className="flex-1 flex lg:flex-col justify-center items-center"
