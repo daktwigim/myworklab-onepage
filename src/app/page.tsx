@@ -69,7 +69,7 @@ export default function Home() {
           <li className="flex-1 border rounded-lg p-3 cursor-pointer">
             <a
               className="flex-1 flex lg:flex-col justify-center items-center"
-              href="/"
+              href="https://deoksoo.notion.site/myworklab-8262384deab2470ea2ca8ee3cb705447"
             >
               <Image
                 className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
@@ -93,7 +93,7 @@ export default function Home() {
           <li className="flex-1 border rounded-lg p-3 cursor-pointer">
             <a
               className="flex lg:flex-col justify-center items-center"
-              href="/"
+              href="https://deoksoo.notion.site/96abcfd45c384671a5f27610c92870cc"
             >
               <Image
                 className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
@@ -117,7 +117,7 @@ export default function Home() {
           <li className="flex-1 border rounded-lg p-3 cursor-pointer">
             <a
               className="flex lg:flex-col justify-center items-center"
-              href="/"
+              href="https://mywork.stibee.com/"
             >
               <Image
                 className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
@@ -141,7 +141,7 @@ export default function Home() {
           <li className="flex-1 border rounded-lg p-3 cursor-pointer">
             <a
               className="flex lg:flex-col justify-center items-center"
-              href="/"
+              href="https://www.instagram.com/myworkyds/"
             >
               <Image
                 className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
