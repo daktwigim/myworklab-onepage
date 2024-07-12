@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "마이워크랩",
   description: "사람들에게 하고 싶은 일을 찾아주고 그들이 즐겁고 의미 있게 일하는 세상을 만듭니다.",
@@ -54,7 +52,7 @@ export default function RootLayout({
           content="630"
         />
       </head>
-      <body className={`flex flex-col justify-center h-screen overscroll-none ${inter.className}`}>
+      <body className={`flex flex-col justify-center h-dvh overscroll-none`}>
         {children}
         <footer className="fixed bottom-0 left-0 w-full p-4 flex justify-center items-center">
           <span className="text-zinc-500 text-sm">Copyright 2024. 유덕수. All rights reserved.</span>

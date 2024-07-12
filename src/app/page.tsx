@@ -93,15 +93,15 @@ export default function Home() {
       {/* Contents */}
       <div className="container lg:max-w-4xl flex flex-col justify-center">
         <Image
-          className="mb-2"
+          className="mb-2 w-[220px] lg:w-[280px]"
           src="/img/logo.svg"
           alt="마이워크랩"
           width={380}
           height={50}
         />
         <h2 className="text-lg text-white lg:text-2xl mb-8">
-          사람들에게 하고 싶은 일을 찾아주고,
-          <br /> 그들이 경제적 자유를 바탕으로 즐겁고 의미 있게 일하는 세상을 만듭니다
+          &#34;사람들에게 하고 싶은 일을 찾아주고,
+          <br /> 그들이 경제적 자유를 바탕으로 즐겁고 의미 있게 일하는 세상을 만듭니다&#34;
         </h2>
         <ul className="flex gap-4 flex-col lg:flex-row text-white">
           <li className="flex-1 border rounded-lg p-3 cursor-pointer hover:bg-zinc-50/10 transition-all">
