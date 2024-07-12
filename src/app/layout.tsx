@@ -56,8 +56,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <footer className="p-2 flex justify-center items-center">
-          <span className="text-white">Copyright 2024. 유덕수. All rights reserved.</span>
+        <footer className="fixed bottom-0 left-0 w-full p-4 flex justify-center items-center">
+          <span className="text-zinc-500 text-sm">Copyright 2024. 유덕수. All rights reserved.</span>
         </footer>
       </body>
     </html>

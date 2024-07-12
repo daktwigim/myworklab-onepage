@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4">
       {/* Backgroud Image and Video */}
-      <div className="fixed top-0 left-0 w-full h-full -z-10">
+      <div className="fixed top-0 left-0 w-full h-full -z-10 transition-all duration-75">
         {/* Background darkter fillter */}
         <div className="absolute top-0 left-0 w-full h-full bg-zinc-950/80 z-50"></div>
         {/* Background Video */}
@@ -104,7 +104,7 @@ export default function Home() {
           <br /> 그들이 경제적 자유를 바탕으로 즐겁고 의미 있게 일하는 세상을 만듭니다
         </h2>
         <ul className="flex gap-4 flex-col lg:flex-row text-white">
-          <li className="flex-1 border rounded-lg p-3 cursor-pointer">
+          <li className="flex-1 border rounded-lg p-3 cursor-pointer hover:bg-zinc-50/10 transition-all">
             <a
               className="flex-1 flex lg:flex-col justify-center items-center"
               href="https://deoksoo.notion.site/myworklab-8262384deab2470ea2ca8ee3cb705447"
@@ -128,7 +128,7 @@ export default function Home() {
               </div>
             </a>
           </li>
-          <li className="flex-1 border rounded-lg p-3 cursor-pointer">
+          <li className="flex-1 border rounded-lg p-3 cursor-pointer hover:bg-zinc-50/10 transition-all">
             <a
               className="flex lg:flex-col justify-center items-center"
               href="https://deoksoo.notion.site/96abcfd45c384671a5f27610c92870cc"
@@ -152,7 +152,7 @@ export default function Home() {
               </div>
             </a>
           </li>
-          <li className="flex-1 border rounded-lg p-3 cursor-pointer">
+          <li className="flex-1 border rounded-lg p-3 cursor-pointer hover:bg-zinc-50/10 transition-all">
             <a
               className="flex lg:flex-col justify-center items-center"
               href="https://mywork.stibee.com/"
@@ -176,7 +176,7 @@ export default function Home() {
               </div>
             </a>
           </li>
-          <li className="flex-1 border rounded-lg p-3 cursor-pointer">
+          <li className="flex-1 border rounded-lg p-3 cursor-pointer hover:bg-zinc-50/10 transition-all">
             <a
               className="flex lg:flex-col justify-center items-center"
               href="https://www.instagram.com/myworkyds/"
