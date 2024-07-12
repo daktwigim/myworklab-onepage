@@ -51,7 +51,7 @@ export default function Home() {
   // }, [videoLoaded]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 overscroll-none">
+    <main className="flex h-full flex-col items-center justify-center p-4 overscroll-none">
       {/* Backgroud Image and Video */}
       <div className="fixed top-0 left-0 w-full h-full -z-10 transition-all duration-75">
         {/* Background darkter fillter */}

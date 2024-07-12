@@ -54,7 +54,7 @@ export default function RootLayout({
           content="630"
         />
       </head>
-      <body className={`overscroll-none ${inter.className}`}>
+      <body className={`flex flex-col justify-center h-screen overscroll-none ${inter.className}`}>
         {children}
         <footer className="fixed bottom-0 left-0 w-full p-4 flex justify-center items-center">
           <span className="text-zinc-500 text-sm">Copyright 2024. 유덕수. All rights reserved.</span>
