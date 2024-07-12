@@ -91,7 +91,7 @@ export default function Home() {
       </div>
 
       {/* Contents */}
-      <div className="container lg:max-w-4xl">
+      <div className="container lg:max-w-4xl flex flex-col justify-center">
         <Image
           className="mb-2"
           src="/img/logo.svg"
@@ -110,7 +110,7 @@ export default function Home() {
               href="https://deoksoo.notion.site/myworklab-8262384deab2470ea2ca8ee3cb705447"
             >
               <Image
-                className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
+                className="lg:mb-2 mr-4 lg:mr-0 w-8 lg:w-12"
                 src={require("@/assets/svg/myworklab.svg")}
                 width={48}
                 height={48}
@@ -134,7 +134,7 @@ export default function Home() {
               href="https://deoksoo.notion.site/96abcfd45c384671a5f27610c92870cc"
             >
               <Image
-                className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
+                className="lg:mb-2 mr-4 lg:mr-0 w-8 lg:w-12"
                 src={require("@/assets/svg/lecture.svg")}
                 width={48}
                 height={48}
@@ -158,7 +158,7 @@ export default function Home() {
               href="https://mywork.stibee.com/"
             >
               <Image
-                className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
+                className="lg:mb-2 mr-4 lg:mr-0 w-8 lg:w-12"
                 src={require("@/assets/svg/newsletter.svg")}
                 width={48}
                 height={48}
@@ -182,7 +182,7 @@ export default function Home() {
               href="https://www.instagram.com/myworkyds/"
             >
               <Image
-                className="lg:mb-2 mr-4 lg:mr-0 w-9 lg:w-12"
+                className="lg:mb-2 mr-4 lg:mr-0 w-8 lg:w-12"
                 src={require("@/assets/svg/instagram.svg")}
                 width={48}
                 height={48}
